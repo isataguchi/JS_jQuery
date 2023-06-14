@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Reggae+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/details-price-p11.js"></script>
+    <script src="js/details-price-p21.js"></script>
+    <script src="js/details-price-p31.js"></script>
+    <script src="js/category-select.js"></script>
+    <title>Shop</title>
+  </head>
+  <body>
+    <header class="header__wrapper">
+      <div class="header--logo">
+              <a href="index.html" title="Home"><img src="images/logo.png" alt="akita inu logo">
+      </div>
+      <div class="header--ttl">
+              <h1>Shopping</h1>
+              </a>
+      </div>
+      <div class="header--nav">
+          <ul>
+              <li class="active"><a href="index.html" title="Home" ><b>HOME</b></a></li>
+              <li class="dropdown">
+                  <a href="/" class="dropbtn"><b>PRODUCTS</b></a>
+                  <div class="dropdown-content">
+                    <a href="/" data-category="tshirt" class="nav-link">T-SHIRT</a>
+                    <a href="/" data-category="plush" class="nav-link">PLUSH</a>
+                    <a href="/"data-category="figure" class="nav-link">FIGURE</a>
+                  </div>
+                </li>
+              <li><a href="payment.html" title="Payment details"><b>PAYMENT</b></a></li>
+          </ul>
+      </div>
+      </header>
+    <main class="content">
+      <div class="content--ttl">
+        <h1 class="main--ttl">Shopping</h1>
+      </div>
+      <!--title/ -->
+      <div class="content--products">
+        <ul class="tabs">
+          <li class="tab" data-category="tshirt">Category 1</li>
+          <li class="tab" data-category="plush">Category 2</li>
+          <li class="tab" data-category="figure">Category 3</li>
+          <!-- Add more tabs for additional categories -->
+        </ul>
+        <div id="tshirt-content" data-category="tshirt">
+          <div class="tab-content" id="tshirt">
+            <table id="product-table">
+              <thead>
+                <tr>
+                  <th class="product--ttl">
+                    T-Shirt 1<br />
+                  </th>
+                  <th class="product--ttl">
+                    T-Shirt 2<br />
+                  </th>
+                  <th class="product--ttl">
+                    T-Shirt 3<br />
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <img
+                      src="images/t-shirt1.png"
+                      alt="Product 1"
+                      class="product--img"
+                    />
+                  </td>
+                  <td>
+                    <img
+                      src="images/t-shirt2.png"
+                      alt="Product 2"
+                      class="product--img"
+                    />
+                  </td>
+                  <td>
+                    <img
+                      src="images/t-shirt3.png"
+                      alt="Product 3"
+                      class="product--img"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <b>Quantity:</b
+                    ><input
+                      type="number"
+                      class="qtd-p1 center"
+                      min="0"
+                      placeholder="0"
+                      id="qtd-p1"
+                    />
+                  </td>
+                  <td>
+                    <b>Quantity:</b
+                    ><input
+                      type="number"
+                      class="qtd-p2 center"
+                      min="0"
+                      placeholder="0"
+                      id="qtd-p2"
+                    />
+                  </td>
+                  <td>
+                    <b>Quantity:</b
+                    ><input
+                      type="number"
+                      class="qtd-p3 center"
+                      min="0"
+                      placeholder="0"
+                      id="qtd-p3"
+                    />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="content--details">
+              <h2>Details</h2>
+              <table class="content--details--table" id="product-table11">
+                <thead>
+                  <tr>
+                    <th>Product - Name</th>
+                    <th>Price (Un.)</th>
+                    <th>Quantity</th>
+                    <th>Tax Rate</th>
+                    <th>Total</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <span type="text" class="product-name">T-Shirt 1</span>
+                    </td>
+                    <td>
+                      <span class="prc-p1" id="prc-p1">12.5</span>
+                    </td>
+                    <td>
+                      <span class="qtd-p1-display">0</span>
+                    </td>
+                    <td>
+                      <span class="tax-rate" id="tax-p1">10%</span>
+                    </td>
+                    <td>
+                      <p id="total-p1" class="total-p1">0.00</p>
+                    </td>
+                  </tr>
+                  <!-- product 1-->
+                  <tr>
+                    <td>
+                      <span type="text" class="product-name">T-Shirt 2</span>
+                    </td>
+                    <td>
+                      <span class="prc-p2" id="prc-p2">15.5</span>
+                    </td>
+                    <td>
+                      <span class="qtd-p2-display">0</span>
+                    </td>
+                    <td>
+                      <span class="tax-rate" id="tax-p2">10%</span>
+                    </td>
+                    <td>
+                      <p id="total-p2" class="total-p2">0.00</p>
+                    </td>
+                  </tr>
+                  <!-- product 2-->
+                  <tr>
+                    <td>
+                      <span type="text" class="product-name">T-Shirt 3</span>
+                    </td>
+                    <td>
+                      <span class="prc-p3" id="prc-p3">19.5</span>
+                    </td>
+                    <td>
+                      <span class="qtd-p3-display">0</span>
+                    </td>
+                    <td>
+                      <span class="tax-rate" id="tax-p3">10%</span>
+                    </td>
+                    <td>
+                      <p id="total-p3" class="total-p3">0.00</p>
+                    </td>
+                  </tr>
+                  <!-- product 3-->
+                  <tr class="total">
+                    <td colspan="2"><b>Total:</b></td>
+                    <td><p id="total-quantity">0</p></td>
+                    <td></td>
+                    <td><p id="total-price">0.00</p></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!--content-details-product1-->
+          </div>
+          <!--category1 -->
+        </div>
+        <div id="plush-content" data-category="plush">
+          <div class="tab-content" id="plush" style="display: none">
+            <table id="product-table-category2">
+              <thead>
+                <tr>
+                  <th class="product--ttl">Plush 1</th>
+                  <th class="product--ttl">Plush 2</th>
+                  <th class="product--ttl">Plush 3</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <img
+                      src="images/plush1.jpg"
+                      alt="Product 21"
+                      class="product--img"
+                    />
+                  </td>
+                  <td>
+                    <img
+                      src="images/plush2.jpg"
+                      alt="Product 22"
+                      class="product--img"
+                    />
+                  </td>
+                  <td>
+                    <img
+                      src="images/plush3.png"
+                      alt="Product 23"
+                      class="product--img"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <b>Quantity:</b
+                    ><input
+                      type="number"
+                      class="qtd-p21 center"
+                      min="0"
+                      placeholder="0"
+                      id="qtd-p21"
+                    />
+                  </td>
+                  <td>
+                    <b>Quantity:</b
+                    ><input
+                      type="number"
+                      class="qtd-p22 center"
+                      min="0"
+                      placeholder="0"
+                      id="qtd-p22"
+                    />
+                  </td>
+                  <td>
+                    <b>Quantity:</b
+                    ><input
+                      type="number"
+                      class="qtd-p23 center"
+                      min="0"
+                      placeholder="0"
+                      id="qtd-p23"
+                    />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          
+            <div class="content--details">
+              <h2>Details</h2>
+              <table class="content--details--table" id="product-table22">
+                <thead>
+                  <tr>
+                    <th>Product - Name</th>
+                    <th>Price (Un.)</th>
+                    <th>Quantity</th>
+                    <th>Tax Rate</th>
+                    <th>Total</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <span type="text" class="product-name">Plush 1</span>
+                    </td>
+                    <td>
+                      <span class="prc-p21" id="prc-p21">9.5</span>
+                    </td>
+                    <td>
+                      <span class="qtd-p21-display">0</span>
+                    </td>
+                    <td>
+                      <span class="tax-rate" id="tax-p21">10%</span>
+                    </td>
+                    <td>
+                      <p id="total-p21" class="total-p21">0.00</p>
+                    </td>
+                  </tr>
+                  <!-- product 1-->
+                  <tr>
+                    <td>
+                      <span type="text" class="product-name">Plush 2</span>
+                    </td>
+                    <td>
+                      <span class="prc-p22" id="prc-p22">10.5</span>
+                    </td>
+                    <td>
+                      <span class="qtd-p22-display">0</span>
+                    </td>
+                    <td>
+                      <span class="tax-rate" id="tax-p22">10%</span>
+                    </td>
+                    <td>
+                      <p id="total-p22" class="total-p22">0.00</p>
+                    </td>
+                  </tr>
+                  <!-- product 2-->
+                  <tr>
+                    <td>
+                      <span type="text" class="product-name">Plush3</span>
+                    </td>
+                    <td>
+                      <span class="prc-p23" id="prc-p23">29.5</span>
+                    </td>
+                    <td>
+                      <span class="qtd-p23-display">0</span>
+                    </td>
+                    <td>
+                      <span class="tax-rate" id="tax-p23">10%</span>
+                    </td>
+                    <td>
+                      <p id="total-p23" class="total-p23">0.00</p>
+                    </td>
+                  </tr>
+                  <!-- product 3-->
+                  <tr class="total total-p20">
+                    <td colspan="2"><b>Total:</b></td>
+                    <td><p id="total-quantity-p20">0</p></td>
+                    <td></td>
+                    <td><p id="total-price-p20">0.00</p></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!--content-details-product2-->
+          </div>
+             <!--category2-->
+        </div>
+        <div id="figure-content" data-category="figure">
+          <div class="tab-content" id="figure" style="display: none">
+            <table id="product-table-category3">
+              <thead>
+                <tr>
+                  <th class="product--ttl">Figure 1</th>
+                  <th class="product--ttl">Figure 2</th>
+                  <th class="product--ttl">Figure 3</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <img
+                      src="images/figure3.png"
+                      alt="Product 31"
+                      class="product--img"
+                    />
+                  </td>
+                  <td>
+                    <img
+                      src="images/figure2.png"
+                      alt="Product 32"
+                      class="product--img"
+                    />
+                  </td>
+                  <td>
+                    <img
+                      src="images/figure1.png"
+                      alt="Product 33"
+                      class="product--img"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <b>Quantity:</b
+                    ><input
+                      type="number"
+                      class="qtd-p31 center"
+                      min="0"
+                      placeholder="0"
+                      id="qtd-p31"
+                    />
+                  </td>
+                  <td>
+                    <b>Quantity:</b
+                    ><input
+                      type="number"
+                      class="qtd-p32 center"
+                      min="0"
+                      placeholder="0"
+                      id="qtd-p32"
+                    />
+                  </td>
+                  <td>
+                    <b>Quantity:</b
+                    ><input
+                      type="number"
+                      class="qtd-p33 center"
+                      min="0"
+                      placeholder="0"
+                      id="qtd-p33"
+                    />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="content--details">
+              <h2>Details</h2>
+              <table class="content--details--table" id="product-table32">
+                <thead>
+                  <tr>
+                    <th>Product - Name</th>
+                    <th>Price (Un.)</th>
+                    <th>Quantity</th>
+                    <th>Tax Rate</th>
+                    <th>Total</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <span type="text" class="product-name">Plush 1</span>
+                    </td>
+                    <td>
+                      <span class="prc-p31" id="prc-p31">44.9</span>
+                    </td>
+                    <td>
+                      <span class="qtd-p31-display">0</span>
+                    </td>
+                    <td>
+                      <span class="tax-rate" id="tax-p31">10%</span>
+                    </td>
+                    <td>
+                      <p id="total-p31" class="total-p31">0.00</p>
+                    </td>
+                  </tr>
+                  <!-- product 1-->
+                  <tr>
+                    <td>
+                      <span type="text" class="product-name">Figure 2</span>
+                    </td>
+                    <td>
+                      <span class="prc-p32" id="prc-p32">32.9</span>
+                    </td>
+                    <td>
+                      <span class="qtd-p32-display">0</span>
+                    </td>
+                    <td>
+                      <span class="tax-rate" id="tax-p32">10%</span>
+                    </td>
+                    <td>
+                      <p id="total-p32" class="total-p32">0.00</p>
+                    </td>
+                  </tr>
+                  <!-- product 2-->
+                  <tr>
+                    <td>
+                      <span type="text" class="product-name">Figure 3</span>
+                    </td>
+                    <td>
+                      <span class="prc-p33" id="prc-p33">33.3</span>
+                    </td>
+                    <td>
+                      <span class="qtd-p33-display">0</span>
+                    </td>
+                    <td>
+                      <span class="tax-rate" id="tax-p33">10%</span>
+                    </td>
+                    <td>
+                      <p id="total-p33" class="total-p33">0.00</p>
+                    </td>
+                  </tr>
+                  <!-- product 3-->
+                  <tr class="total total-p30">
+                    <td colspan="2"><b>Total:</b></td>
+                    <td><p id="total-quantity-p30">0</p></td>
+                    <td></td>
+                    <td><p id="total-price-p30">0.00</p></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!--content-details-product3-->
+          </div>
+          <!--category3-->
+        </div>
+
+      </div>
+      <!--content--products/ -->
+
+      <a href="payment.html" class="btn__payment">Payment</a>
+    </main>
+    <footer></footer>
+  </body>
+</html>

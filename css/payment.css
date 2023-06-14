@@ -1,0 +1,122 @@
+
+:root{
+  --ttl-font: 'Reggae One', cursive;
+  --text-font: font-family: 'Ubuntu', sans-serif;
+}
+
+#address1, input, span, label {
+    font-family: monospace;
+    font-size: 14px;
+    padding: 5px !important;
+    line-height: 1.2em;
+    margin-bottom: 2px;
+    
+
+  }
+  label {
+    display: block;
+    font-weight: bold;
+    line-height: 2em;
+    letter-spacing: 0.2em;
+  }
+  div {
+    margin: 0 0 1rem 0;
+  }
+
+  h3{
+    font-family: var(--ttl-font);
+    font-size: 28px;
+    letter-spacing: 0.2em;
+    text-align: center;
+  }
+  .row{
+    width: 800px;
+    margin: 0 auto;
+  }
+  .pay-form {
+    padding: 40px 90px 60px;
+    margin: 150px 0;
+    background: rgba(255, 192, 203, 0.5);
+    border-radius: 20px;
+    justify-content: center;
+    
+}
+.pay-form label{
+  text-align: left;
+}
+#fname{
+  width: 400px;
+}
+#zip{
+  width: 80px;
+  text-align: center;
+}
+#address1{
+  text-align: center;
+  justify-content: center;
+  width: 237px;
+}
+#address2{
+  width: 398px;
+}
+#address3{
+  width: 449px;
+}
+#address1_kana, #address2_kana{
+  width: 389px;
+}
+#address3_kana{
+  width: 419px;
+}
+
+#reset{
+  justify-content: right;
+  font-size: 11px;
+  padding: 3px 15px !important;
+}
+
+.form-footer {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  margin: 40px 0 0;
+}
+.button-submit{
+  float: right;
+  background-color: rgba(255, 208, 68, 0.925);
+  border: none;
+  padding: 10px 20px;
+  border-radius:15px ;
+  width: 150px;
+  height: 35px;
+  font-size: 1.4em;
+  font-weight: bolder;
+}
+
+.button-submit:hover{
+  cursor: pointer;
+  font-size: 16px;
+  color: rgba(253, 253, 253, 0.822);
+}
+.button-back{
+  display: flex;
+  float: left;
+  background-color: rgba(199, 199, 199, 0.5);
+  border-radius: 15px;
+  font-family: var(--text-font);  
+  font-weight: bolder;
+  letter-spacing: 0.2em;
+}
+.button-back:hover{
+  cursor: pointer;
+  background: rgba(255, 208, 68, 0.925);
+}
+.button-back a{
+  font-size: 13px;
+  text-decoration: none;
+  padding: 3px 20px;
+}
+  .button-back a:hover{
+  color: rgba(253, 253, 253, 0.822);
+}
