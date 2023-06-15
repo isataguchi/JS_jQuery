@@ -1,0 +1,20 @@
+.container{
+    margin: 120px 0;
+    width: 80%;
+    background-color: rgba(255, 186, 237, 0.8); 
+    padding: 40px;
+    border-radius: 15px;
+}
+.container--footer{
+    display: flex;
+    padding: 5px 25px;
+    background-color: rgba(199, 199, 199, 0.5);
+    width: 150px;
+    justify-content: center;
+    margin: 0 auto;
+}
+.container--footer:hover{
+    cursor: pointer;
+   background: rgba(255, 208, 68, 0.925);
+
+}
